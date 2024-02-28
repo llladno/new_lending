@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  display: none;
   background: #e8e4db;
 }
 
@@ -21,6 +22,15 @@ header {
   justify-content: space-between;
   align-items: center;
   background: #e8e4db;
+}
+header a {
+  text-decoration: none;
+  color: #131b23;
+  transition: ease-in-out 0.2s;
+  margin: 0 5px;
+}
+header a:hover {
+  color: #939393;
 }
 header .header-title {
   font-size: 21px;
@@ -40,7 +50,7 @@ header .header-title {
   height: 100%;
   backdrop-filter: brightness(0.27);
   color: white;
-  font-size: 70px;
+  font-size: clamp(2rem, 1.3214rem + 3.3929vw, 4.375rem);
   z-index: 5;
   top: 0px;
   left: 0;
@@ -300,6 +310,15 @@ header .header-title {
   width: 100%;
   object-fit: cover;
 }
+.slider2 .open-info {
+  float: left;
+}
+.slider2 .open-info .open-info_img {
+  margin-left: 20px;
+  float: left;
+  filter: invert(1);
+  transition: 0.5s ease;
+}
 .slider2 .more-info {
   position: absolute;
   overflow: hidden;
@@ -333,6 +352,11 @@ header .header-title {
 }
 .slider2 .more-info .show-info div {
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   transition: ease-in-out 0.3s;
 }
 .slider2 .more-info .show-info h3 {
@@ -443,9 +467,6 @@ header .header-title {
     display: grid !important;
     opacity: 1 !important;
   }
-  body .slider1-title {
-    font-size: 45px !important;
-  }
   body .container {
     max-width: 480px;
   }
@@ -476,6 +497,9 @@ header .header-title {
   }
 }
 @media (max-width: 480px) {
+  body header {
+    margin: 0;
+  }
   body .about-me-bgtext {
     width: auto;
   }
@@ -504,9 +528,6 @@ header .header-title {
     font-size: 14px;
     display: grid !important;
     opacity: 1 !important;
-  }
-  body .slider1-title {
-    font-size: 45px !important;
   }
   body .container {
     max-width: 480px;

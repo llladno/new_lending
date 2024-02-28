@@ -6,6 +6,10 @@ const soft_skills_button = document.querySelector('.soft_skills_button')
 
 let state_open = false
 let slide_show = 'photo'
+
+window.addEventListener('load',()=>{
+    document.querySelector('body').style.display = 'block'
+})
 function set_default_hard_skills () {
     soft_skills_button.style.opacity = 1
     hard_skills_button.style.opacity = 0
